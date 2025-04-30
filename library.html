@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .form-container {
+      background-color: white;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Library Management System</h2>
+  <form action="/submit-library-data" method="post">
+
+    <!-- Book Details -->
+    <label for="bookId">Book ID:</label>
+    <input type="text" id="bookId" name="bookId" required>
+
+    <label for="title">Book Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" required>
+
+    <label for="genre">Genre:</label>
+    <select id="genre" name="genre">
+      <option value="fiction">Fiction</option>
+      <option value="non-fiction">Non-Fiction</option>
+      <option value="science">Science</option>
+      <option value="history">History</option>
+    </select>
+
+    <label for="pubDate">Publication Date:</label>
+    <input type="date" id="pubDate" name="pubDate">
+
+    <!-- Member Details -->
+    <label for="memberName">Member Name:</label>
+    <input type="text" id="memberName" name="memberName">
+
+    <label for="memberId">Member ID:</label>
+    <input type="text" id="memberId" name="memberId">
+
+    <label for="issueDate">Issue Date:</label>
+    <input type="date" id="issueDate" name="issueDate">
+
+    <label for="returnDate">Return Date:</label>
+    <input type="date" id="returnDate" name="returnDate">
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
