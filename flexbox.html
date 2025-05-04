@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Three Columns</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between; /* space between columns */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .column {
+      flex: 1; /* equal width for all columns */
+      background-color: #cde;
+      padding: 20px;
+      border: 2px solid #333;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Three Column Layout Using Flexbox</h2>
+
+  <div class="container">
+    <div class="column">Column 1</div>
+    <div class="column">Column 2</div>
+    <div class="column">Column 3</div>
+  </div>
+
+</body>
+</html>
