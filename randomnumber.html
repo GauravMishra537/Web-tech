@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lottery System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      transition: background-color 0.5s ease; /* Smooth transition for background color */
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input {
+      font-size: 20px;
+      padding: 10px;
+      text-align: center;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Lottery System</h2>
+  <button onclick="generateLotteryAmount()">Click for Lottery Prize</button>
+  <input type="text" id="lotteryAmount" readonly placeholder="Your Prize Amount">
+
+  <script>
+    function generateLotteryAmount() {
+      // Generate random amount between 1,00,000 and 5,00,000
+      let lotteryAmount = Math.floor(Math.random() * (500000 - 100000 + 1)) + 100000;
+      
+      // Display the result in the input box
+      document.getElementById("lotteryAmount").value = "₹" + lotteryAmount.toLocaleString();
+      
+      // Change background color with random color
+      document.body.style.backgroundColor = getRandomColor();
+    }
+
+    // Function to generate a random color
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+
+</body>
+</html>
