@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Color Changer</title>
+  <style>
+    /* Full page height and no margin */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Center content using Flexbox */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="mainContainer">
+    <h2>Choose a background color:</h2>
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="changeColor('blue')">Blue</button>
+    <button onclick="changeColor('yellow')">Yellow</button>
+    <button onclick="changeColor('white')">Reset</button>
+     <button onclick="changeColor('orange')">orange</button>
+      <button onclick="changeColor('pink')">pink</button>
+       <button onclick="changeColor('violet')">violet</button>
+        <button onclick="changeColor('black')">Black</button>
+  </div>
+
+  <script>
+    function changeColor(color) {
+      // Change background color of the container
+      document.getElementById("mainContainer").style.backgroundColor = color;
+    }
+  </script>
+
+</body>
+</html>
